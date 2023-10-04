@@ -1,5 +1,5 @@
 {% set name = "rustworkx" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: e76c67896030c9edd9823c2937ac6bfa1ce58bae580a8214596b687b6011a487
+    sha256: 0276cf0b989211859e8797b67d4c16ed6ac9eb32edb67e0a47e70d7d71e80574
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
