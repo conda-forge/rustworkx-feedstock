@@ -5,7 +5,7 @@ cdt_arch:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -24,6 +24,3 @@ rust_compiler:
 - rust
 target_platform:
 - linux-aarch64
-zip_keys:
-- - python
-  - channel_sources
