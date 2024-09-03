@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 0e0cc86599f979285b2ab9c357276f3272f3fcb3b2df5651a6bf9704c570d4c1
+  - url: https://github.com/Qiskit/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+    sha256: 8e686f28be7d187cda1d7f1a86c13fb014fe18bb16cb752cbd571a30697827d1
 
 build:
   number: 1
@@ -38,6 +38,7 @@ requirements:
     - python
   run_constrained:
     - matplotlib >=3.0
+    - matplotlib-base >=3.0
     - pillow >=5.4
 
 test:
@@ -46,8 +47,15 @@ test:
     - rustworkx.visualization
   commands:
     - pip check
+    - stestr --test-path=tests run  # [build_platform == target_platform]
   requires:
+    - fixtures  # [build_platform == target_platform]
+    - networkx >=2.5  # [build_platform == target_platform]
     - pip
+    - stestr >=4.1  # [build_platform == target_platform]
+    - testtools >=2.5.0  # [build_platform == target_platform]
+  source_files:
+    - tests/*
 
 about:
   home: https://github.com/Qiskit/rustworkx
