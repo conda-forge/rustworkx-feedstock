@@ -1,4 +1,0 @@
-# Can not use the default 10.9 any more because of rust 1.75
-# See https://github.com/conda-forge/pydantic-core-feedstock/pull/88#issuecomment-1899782608
-c_stdlib_version:          # [osx and x86_64]
-  - "10.12"                # [osx and x86_64]
