@@ -35,9 +35,8 @@ requirements:
     - python
     - python-abi3
     - pip
-    - setuptools
-    - setuptools-rust
-    - wheel
+    - setuptools >=77.0.0
+    - setuptools-rust >=1.9
   run:
     - numpy >=1.16.0,<3
     - python
