@@ -1,7 +1,7 @@
 context:
   name: rustworkx
   python_name: rustworkx
-  version: "0.16.0"
+  version: "0.17.0"
   python_min: "3.9"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/Qiskit/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: ef3c6fb3bd7e6a18919023330f3961702346d8afbe95aa5f446f9b222ee72391
+  sha256: ae6b635de5ad9e06417536bfb02ad061f76b736318ea86f32dd544641590562f
 
 build:
   number: 2
