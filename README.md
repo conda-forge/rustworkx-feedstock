@@ -203,6 +203,3 @@ Feedstock Maintainers
 * [@IvanIsCoding](https://github.com/IvanIsCoding/)
 * [@wshanks](https://github.com/wshanks/)
 
-
-<!-- dummy commit to enable rerendering -->
-
