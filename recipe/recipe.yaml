@@ -13,7 +13,7 @@ source:
   sha256: dc248da9cc364b81ac67f5d67b626ee3f03a1f6299f7a9b4d0a0501548715365
 
 build:
-  number: 2
+  number: 3
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv
@@ -25,8 +25,8 @@ requirements:
   build:
     - if: build_platform != target_platform
       then:
-      - python
-      - cross-python_${{ target_platform }}
+        - python
+        - cross-python_${{ target_platform }}
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - ${{ compiler('rust') }}
@@ -50,7 +50,7 @@ tests:
       imports:
         - rustworkx
         - rustworkx.visualization
-      python_version: ["${{ python_min ~ '.*' }}"]  
+      python_version: ["${{ python_min ~ '.*' }}"]
   - script:
       - pip check
       - if: build_platform == target_platform
