@@ -12,9 +12,12 @@ source:
   sha256: c0a47afd9a16f560d46a3f95b11a9606c8da958b6a9e9ec4e69e0063801342b2
 
 build:
-  number: 4
+  number: 5
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - if: target_platform == "osx-arm64"
+      then:
+        - export MATURIN_PEP517_ARGS="--target aarch64-apple-darwin"
     - ${{ PYTHON }} -m pip install . -vv
   skip: not (match(python, python_min ~ ".*") and is_abi3)
   python:
