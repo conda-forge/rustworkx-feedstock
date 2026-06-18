@@ -1,7 +1,7 @@
 context:
   name: rustworkx
   python_name: rustworkx
-  version: "0.17.1"
+  version: "0.18.0"
 
 package:
   name: rustworkx
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/Qiskit/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
-  sha256: dc248da9cc364b81ac67f5d67b626ee3f03a1f6299f7a9b4d0a0501548715365
+  sha256: c0a47afd9a16f560d46a3f95b11a9606c8da958b6a9e9ec4e69e0063801342b2
 
 build:
-  number: 3
+  number: 4
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv
@@ -34,8 +34,8 @@ requirements:
     - python
     - python-abi3
     - pip
+    - maturin
     - setuptools >=77.0.0
-    - setuptools-rust >=1.9
   run:
     - numpy >=1.16.0,<3
     - python
