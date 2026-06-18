@@ -12,7 +12,7 @@ source:
   sha256: c0a47afd9a16f560d46a3f95b11a9606c8da958b6a9e9ec4e69e0063801342b2
 
 build:
-  number: 3
+  number: 4
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv
@@ -34,8 +34,8 @@ requirements:
     - python
     - python-abi3
     - pip
+    - maturin
     - setuptools >=77.0.0
-    - setuptools-rust >=1.9
   run:
     - numpy >=1.16.0,<3
     - python
