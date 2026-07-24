@@ -8,8 +8,8 @@ jobs:
     vmImage: windows-2022
   strategy:
     matrix:
-      win_64_python3.10.____cpython:
-        CONFIG: win_64_python3.10.____cpython
+      win_64_is_abi3truepython3.10.____cpython:
+        CONFIG: win_64_is_abi3truepython3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         build_workspace_dir: D:\\bld\\
         free_disk_space: skip
