@@ -17,7 +17,7 @@ channel_targets:
 is_abi3:
 - true
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -29,4 +29,7 @@ python_min:
 rust_compiler:
 - rust
 target_platform:
-- osx-64
+- osx-arm64
+zip_keys:
+- - python
+  - is_abi3
