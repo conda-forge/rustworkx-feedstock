@@ -12,7 +12,7 @@ source:
   sha256: 901e3161100834877c84b3a301da658c1153399d478667b1a0bbb9c2190d6d4f
 
 build:
-  number: 7
+  number: 8
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - if: target_platform == "osx-arm64"
