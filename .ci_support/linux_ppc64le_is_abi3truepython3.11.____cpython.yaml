@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/amd64
 c_compiler:
 - gcc
 c_compiler_version:
@@ -28,5 +30,4 @@ target_platform:
 - linux-ppc64le
 zip_keys:
 - - python
-  - channel_sources
   - is_abi3
